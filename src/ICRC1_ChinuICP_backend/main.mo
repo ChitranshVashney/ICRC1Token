@@ -9,7 +9,6 @@ actor holder_canister {
   };
 
   public shared (caller) func deposit(amount : Nat) : async () {
-    // Assume 'transfer_from' is correctly implemented in the token canister.
     let _ = await Token.transfer_from(caller, Principal.fromActor(this), amount);
     balances.put(caller, amount + balances.get(caller, 0));
   };
