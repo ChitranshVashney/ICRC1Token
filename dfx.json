@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "ICRC1_ChinuICP_backend": {
+      "main": "src/ICRC1_ChinuICP_backend/main.mo",
+      "type": "motoko"
+    },
+    "ICRC1_ChinuICP_frontend": {
+      "dependencies": [
+        "ICRC1_ChinuICP_backend"
+      ],
+      "source": [
+        "src/ICRC1_ChinuICP_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "ICRC1_ChinuICP_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
